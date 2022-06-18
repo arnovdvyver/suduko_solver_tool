@@ -48,7 +48,7 @@ void Grid::solver()
     contender_phase();
     
     int next_phase = get_filled_cells();
-    if (next_phase == 81)
+    if (next_phase < 81)
         backtracking_phase(0);
 }
 
