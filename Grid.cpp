@@ -46,7 +46,10 @@ void Grid::show_grid()
 void Grid::solver()
 {
     contender_phase();
-    backtracking_phase(0);
+    
+    int next_phase = get_filled_cells();
+    if (next_phase == 81)
+        backtracking_phase(0);
 }
 
 
